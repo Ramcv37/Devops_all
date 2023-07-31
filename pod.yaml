@@ -6,6 +6,10 @@ spec:
   selector:
     matchLabels:
       app: my-app
+<<<<<<< HEAD
+=======
+  replicas: 5
+>>>>>>> b58ea454a7fa6d16ad2d502728e11ee632e1b5f3
   template:
     metadata:
       labels:
@@ -13,7 +17,11 @@ spec:
     spec:
       containers:
       - name: my-container
+<<<<<<< HEAD
         image: rajismily/project1:latest
+=======
+        image: rajismily/project1:9 
+>>>>>>> b58ea454a7fa6d16ad2d502728e11ee632e1b5f3
         ports:
         - containerPort: 80
           protocol: TCP
