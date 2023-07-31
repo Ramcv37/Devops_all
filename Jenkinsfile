@@ -23,7 +23,7 @@ pipeline {
         stage('Kubernates') {
             steps {
                sh 'sudo kubectl apply -f /var/lib/jenkins/workspace/Project1/pod.yaml'
-               sh 'sudo kubectl rollout restart deployment loadbancer-pod'
+            //   sh 'sudo kubectl rollout restart deployment loadbancer-pod'
             }
         }    
         stage('Success/failure') {
