@@ -22,7 +22,8 @@ pipeline {
         }    
         stage('Kubernates') {
             steps {
-               echo 'need to work on git'
+               sh 'sudo kubectl apply -f /var/lib/jenkins/workspace/Project1/pod.yaml'
+               sh 'sudo kubectl roolout restart deployment loadbancer-pod'
             }
         }    
         stage('Success/failure') {
