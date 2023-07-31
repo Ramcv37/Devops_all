@@ -17,6 +17,7 @@ pipeline {
             steps {
                sh 'sudo docker image push rajismily/project1:latest'
                sh 'sudo docker image push rajismily/project1:$BUILD_NUMBER'
+               echo 'till here success'
             }
         }    
         stage('Kubernates') {
