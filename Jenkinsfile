@@ -15,7 +15,8 @@ pipeline {
         }    
         stage('docker push') {
             steps {
-               echo 'need to work on git'
+               sh 'sudo docker image push rajismily/project1:latest'
+               sh 'sudo docker image push rajismily/project1:$BUILD_NUMBER'
             }
         }    
         stage('Kubernates') {
