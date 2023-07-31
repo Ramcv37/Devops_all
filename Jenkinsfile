@@ -9,7 +9,7 @@ pipeline {
         stage('Docker Image') {
             steps {
               
-               sh ' sudo docker build -t rajismily/project:latest /var/lib/jenkins/workspace/Kube'
+               sh ' sudo docker build -t rajismily/project1:latest /var/lib/jenkins/workspace/Project1'
                 sh ' sudo -S docker images'
                
             }
