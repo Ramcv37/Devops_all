@@ -10,8 +10,13 @@ pipeline {
             steps {
               
                sh ' sudo docker build -t rajismily/project1:latest /var/lib/jenkins/workspace/Project1'
+<<<<<<< HEAD
                sh ' sudo docker tag  rajismily/project1:latest rajismily/project1:${BUILD_NUMBER}'  
               sh ' sudo -S docker images'
+=======
+               sh ' sudo docker tag rajismily/project1:latest rajismily/project1:$BUILD_NUMBER'
+               sh ' sudo -S docker images'
+>>>>>>> 4b399bf3504a58d36d816aacf93ca205fd8481f7
                
             }
         }    
