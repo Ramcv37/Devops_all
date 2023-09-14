@@ -8,15 +8,15 @@ pipeline {
         }    
         stage('Docker Image') {
             steps {
-               sh ' sudo docker build -t rajismily/project1:latest /var/lib/jenkins/workspace/Project1'
-               sh ' sudo docker tag rajismily/project1:latest rajismily/project1:$BUILD_NUMBER'
+               sh ' sudo docker build -t rajismily/project2:latest /var/lib/jenkins/workspace/test'
+               sh ' sudo docker tag rajismily/project2:latest rajismily/project2:$BUILD_NUMBER'
                sh ' sudo -S docker images'
             }
         }    
         stage('docker push') {
             steps {
-               sh 'sudo docker image push rajismily/project1:latest'
-               sh 'sudo docker image push rajismily/project1:$BUILD_NUMBER'
+               sh 'sudo docker image push rajismily/project2:latest'
+               sh 'sudo docker image push rajismily/project2:$BUILD_NUMBER'
                echo 'till here success looks its working'
             }
         }    
