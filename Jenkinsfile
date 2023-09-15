@@ -5,13 +5,13 @@ pipeline {
             steps {
                 script {
                   // Get the branch name
-                def branches = sh(script: 'git branch', returnStdout: true).trim()
+            //    def branches = sh(script: 'git branch', returnStdout: true).trim()
                 // Get the commit ID
-                def commitID = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim() 
+             //   def commitID = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim() 
                 
                 // Print the information in the desired format
-                echo "Branch: ${branchName}"
-                echo "Commit: ${commitID}"
+             //   echo "Branch: ${branchName}"
+             //   echo "Commit: ${commitID}"
                 }
             }
                
