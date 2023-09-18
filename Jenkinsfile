@@ -17,7 +17,7 @@ pipeline {
                
       //  }
         // Add more stages as needed
-        stage('Docker stage') {
+        stage('Docker stage 2') {
             steps {
                sh ' sudo docker build -t rajismily/project2:latest /var/lib/jenkins/workspace/test'
                sh ' sudo docker tag rajismily/project2:latest rajismily/project2:$BUILD_NUMBER'
@@ -39,7 +39,7 @@ pipeline {
       //  }    
         stage('Success/failure') {
             steps {
-               echo 'need to test stages for blue ocean'
+               echo 'need to test stages for blue ocean test2'
             }
         }    
     }
