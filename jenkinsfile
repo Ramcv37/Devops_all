@@ -20,8 +20,8 @@ hpipeline {
         stage('Deploy') {
             steps {
                 // Deploy the application (replace with your deployment steps)
-                echo "Deploying the application"'
-                echo "deployed"'
+                echo "Deploying the application"
+                echo "deployed"
             }
         }
     }
@@ -29,7 +29,7 @@ hpipeline {
     post {
         success {
             // Execute steps when the pipeline succeeds
-            echo 'Pipeline succeeded! Deployed successfully.'
+            echo 'Pipeline succeeded! Deployed successfully'
         }
         failure {
             // Execute steps when the pipeline fails
