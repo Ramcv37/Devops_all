@@ -10,9 +10,7 @@ pipeline {
         stage ('Checkout') {
             steps {
               echo 'this is git'
-              sh "git init"
-              sh "git pull https://github.com/Ramcv37/Devops_all.git"
-              sh "git config pull.rebase true"
+              sh "git pull origin master"
             }
         }
          stage ('build') {
