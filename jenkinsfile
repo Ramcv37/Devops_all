@@ -1,39 +1,25 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('Checkout') {
+        stage ('Checkout') {
             steps {
-                // Checkout code from Git repository
-               sh  "git pull origin master"
+              echo 'this is git'
+              sh "git init"
+              sh "git pull https://github.com/Ramcv37/Devops_all.git"
             }
         }
-
-        stage('Build') {
+         stage ('build') {
             steps {
-                // Build Maven project
-                sh 'ls'
-                sh 'git log  --oneline'
+              echo 'this is build' 
+              sh "ls"
+              sh "git log --oneline"
             }
         }
-
-        stage('Deploy') {
+         stage ('test') {
             steps {
-                // Deploy the application (replace with your deployment steps)
-                echo "Deploying the application"
-                echo "deployed"
+               echo 'this is test' 
             }
-        }
-    }
-
-    post {
-        success {
-            // Execute steps when the pipeline succeeds
-            echo 'Pipeline succeeded! Deployed successfully'
-        }
-        failure {
-            // Execute steps when the pipeline fails
-            echo 'Pipeline failed! Deployment unsuccessful.'
         }
     }
 }
