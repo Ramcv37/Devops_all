@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from Git repository
-               sh  "git pull https://github.com/Ramcv37/Devops_all.git"
+               sh  "git pull origin master"
             }
         }
 
