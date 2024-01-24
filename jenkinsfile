@@ -2,6 +2,11 @@ pipeline {
     agent any
     
     stages {
+        stage('Clean Workspace') {
+         steps {
+           deleteDir()
+          }
+        }
         stage ('Checkout') {
             steps {
               echo 'this is git'
@@ -10,11 +15,6 @@ pipeline {
               sh "git config pull.rebase true"
             }
         }
-        stage('Clean Workspace') {
-    steps {
-        deleteDir()
-    }
-}
          stage ('build') {
             steps {
               echo 'this is build' 
