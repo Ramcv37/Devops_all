@@ -1,7 +1,4 @@
-# Simple Python code for greeting
+# Simple Python print program
 
-# Get user input for name
-name = input("Enter your name: ")
-
-# Print a greeting
-print("Hello, " + name + "! Welcome to Python programming.")
+# Display a message
+print("Hello, World! This is a simple print program.")
