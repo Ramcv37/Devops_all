@@ -1,4 +1,4 @@
-pipeline {
+hpipeline {
     agent any
 
     stages {
@@ -20,8 +20,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Deploy the application (replace with your deployment steps)
-                sh 'echo "Deploying the application"'
-                sh ''
+                echo "Deploying the application"'
+                echo "deployed"'
             }
         }
     }
