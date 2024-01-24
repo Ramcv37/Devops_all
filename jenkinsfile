@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from Git repository
+               sh  "git pull https://github.com/Ramcv37/Devops_all.git"
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Build Maven project
+                sh 'ls'
+                sh 'git log  --oneline'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Deploy the application (replace with your deployment steps)
+                sh 'echo "Deploying the application"'
+                sh ''
+            }
+        }
+    }
+
+    post {
+        success {
+            // Execute steps when the pipeline succeeds
+            echo 'Pipeline succeeded! Deployed successfully.'
+        }
+        failure {
+            // Execute steps when the pipeline fails
+            echo 'Pipeline failed! Deployment unsuccessful.'
+        }
+    }
+}
