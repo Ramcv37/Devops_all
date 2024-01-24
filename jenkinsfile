@@ -10,6 +10,7 @@ pipeline {
         stage ('Checkout') {
             steps {
               echo 'this is git'
+              sh "git init"
               sh "git pull origin master"
             }
         }
