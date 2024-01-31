@@ -2,6 +2,10 @@ pipeline {
 
 agent any
 
+// parameters {
+//        choice(name: 'BUILD_TYPE', choices: ['Prod', 'test'], description: 'Select build type')
+//    }
+
 stages {
 
   stage ("Git") {
