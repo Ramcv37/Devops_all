@@ -1,6 +1,8 @@
 pipeline {
 
-agent java
+agent {
+        label 'java'
+    }
 
 // parameters {
 //        choice(name: 'BUILD_TYPE', choices: ['Prod', 'test'], description: 'Select build type')
