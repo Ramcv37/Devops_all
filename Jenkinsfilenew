@@ -1,7 +1,7 @@
 pipeline {
 
 agent {
-        label 'java || job1'
+        label 'Dev'
     }
 
 // parameters {
@@ -21,9 +21,6 @@ stages {
   }
  
  stage ("Build") {
-      agent {
-        label 'java'
-    }
  
     steps {
      echo "Lets build a code" 
@@ -32,9 +29,6 @@ stages {
   }
  
  stage ("Test") {
-     agent {
-        label 'job1'
-    }
 
     steps {
        echo "Lets test a code"
