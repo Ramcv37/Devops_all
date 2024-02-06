@@ -39,10 +39,9 @@ stage ("Deploy") {
        echo "Lets Deploy a code"
     }   
   }
-}
 post {
-    success {
-      mail to: ram.cloud37@gmail.com, subject: ‘The Pipeline success :(‘
+    always {
+      echo ‘I will always execute this!’
     }
   }
 }
