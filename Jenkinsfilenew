@@ -39,9 +39,10 @@ stage ("Deploy") {
        echo "Lets Deploy a code"
     }   
   }
+}
 post {
     always {
-      echo ‘I will always execute this!’
+      echo ‘I will always execute this’
     }
   }
 }
