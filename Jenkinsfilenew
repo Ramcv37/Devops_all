@@ -40,4 +40,9 @@ stage ("Deploy") {
     }   
   }
 }
+post {
+    success {
+      mail to: ram.cloud37@gmail.com, subject: ‘The Pipeline success :(‘
+    }
+  }
 }
