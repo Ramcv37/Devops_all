@@ -1,0 +1,3 @@
+
+from python
+Workdir /tmp
