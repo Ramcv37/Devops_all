@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-daemonset
+spec:
+  selector:
+    matchLabels:
+      app: my-app
+      replicas: 5
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: rajismily/project1:9 
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        # Add additional container configuration as needed
+      # Add additional containers or other specifications as needed

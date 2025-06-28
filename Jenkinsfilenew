@@ -1,0 +1,43 @@
+pipeline {
+
+agent any
+
+// parameters {
+//        choice(name: 'BUILD_TYPE', choices: ['Prod', 'test'], description: 'Select build type')
+//    }
+
+stages {
+
+  stage ("Git") {
+ 
+    steps {
+       echo "we will clone git"
+       sh "git pull https://github.com/Ramcv37/Devops_all.git"
+       sh "ls"
+       sh "git log --oneline"
+    }   
+  }
+ 
+ stage ("Build") {
+ 
+    steps {
+     echo "Lets build a code" 
+     sh "python3 firstpy.py"
+    }   
+  }
+ 
+ stage ("Test") {
+
+    steps {
+       echo "Lets test a code"
+    }   
+  }
+
+stage ("Deploy") {
+ 
+    steps {
+       echo "Lets Deploy a code"
+    }   
+  }
+}
+}

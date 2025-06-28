@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def branchName = env.BRANCH_NAME
+                    echo "Branch or Pull Request: ${branchName}"
+                    def commitId = env.GIT_COMMIT
+                    echo "Commit Id: ${commitId}"
+                }
+            }
+        }
+    }
+}
+
